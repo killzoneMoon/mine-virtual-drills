@@ -1,0 +1,152 @@
+@import '../static/main.less';
+
+
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: comic sans ms;
+    .background{
+        background-color: @backgroundcolor;
+        height: 40rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .onshow{
+            .title,.subtitle{
+                font-size: @title-charactor;
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+            }
+            .subtitle{
+                font-size: @big-charactor;
+            }
+        }
+        .count,.time{
+            display: none;
+        }
+        .caption{
+            text-align: center;
+        }
+        .content{
+            position: relative;
+            margin: 3rem 0 1rem 0;
+            .textarea-background{
+                width: 50rem;
+                min-width: 30rem;
+                height: auto;
+                background-color: @translusent;
+                color: gray;
+                border-radius: 0.4rem;
+                box-sizing: border-box;
+                padding: 0.85rem 1rem;
+                outline: transparent;
+                border: none;
+            }
+            .textarea{
+                position: absolute;
+                box-sizing: border-box;
+                font-size: 1rem;
+                top: 0.85rem;
+                left: 1rem;
+                padding: 0;
+                border: none;
+                background-color: transparent;
+                outline: none;
+                font-family: none;
+                width: 0px;
+                color: transparent;
+            }
+            .typeplace,.newRow{
+                top: 1.1rem;
+                left: 1rem;
+                .right,.wrong{
+                    float: left;
+                    height: 1rem;
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+                    background-color: green;
+                    line-height: 1rem;
+                    margin-bottom: 0.5rem;
+                }
+                .wrong{
+                    background-color: red;
+                }
+                .space{
+                    width: 0.297em;
+                }
+                
+            }
+            .row1{
+                top: 2.6rem !important;;
+            }
+            .row2{
+                top: 4rem !important;;
+            }
+            .row3{
+                top:5.41rem !important;
+            }
+            .row4{
+                top:6.82rem !important;
+            }
+            .row5{
+                top:8.13rem !important;
+            }
+          
+
+            .typeplace{
+                position: absolute;
+            }
+        }
+    }
+    .result{
+        display: none;
+        height: 20rem;
+        margin: 0 auto;
+        text-align: center;
+        color: white;
+        font-size: 1.6rem;
+        margin-top: 4%;
+        flex-direction: column;
+        align-items: center;
+        .avarage-time{
+            font-size: 5rem;
+        }
+       .buttons{
+        margin-top: 3rem;
+        .save,.try-again{
+            padding: 6px 20px;
+            background-color: @primary-yellow;
+            border-radius: 5px;
+            color: black;
+            font-size: 20px;
+            float: left;
+        }
+        .try-again{
+            background-color: @translusent;
+        }
+        .save{
+            margin-right: 1rem;
+        }
+       }
+    }
+    .author-note{
+        position: absolute;
+        bottom: 2rem;
+        p{
+            color: lightgray;
+            font-size: 0.5rem;
+            display: inline-block;
+            margin: 0;
+            padding: 0 1rem;
+        }
+        p:nth-of-type(2n-1){
+            border-right: 1px solid lightgray;
+        }
+    }
+}

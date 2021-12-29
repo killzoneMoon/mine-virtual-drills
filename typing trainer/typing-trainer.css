@@ -1,0 +1,153 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-family: comic sans ms;
+}
+body .background {
+  background-color: #4387d6;
+  height: 40rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body .background .onshow .title,
+body .background .onshow .subtitle {
+  font-size: 3.5rem;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+body .background .onshow .subtitle {
+  font-size: 1.5rem;
+}
+body .background .count,
+body .background .time {
+  display: none;
+}
+body .background .caption {
+  text-align: center;
+}
+body .background .content {
+  position: relative;
+  margin: 3rem 0 1rem 0;
+}
+body .background .content .textarea-background {
+  width: 50rem;
+  min-width: 30rem;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.657);
+  color: gray;
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+  padding: 0.85rem 1rem;
+  outline: transparent;
+  border: none;
+}
+body .background .content .textarea {
+  position: absolute;
+  box-sizing: border-box;
+  font-size: 1rem;
+  top: 0.85rem;
+  left: 1rem;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-family: none;
+  width: 0px;
+  color: transparent;
+}
+body .background .content .typeplace,
+body .background .content .newRow {
+  top: 1.1rem;
+  left: 1rem;
+}
+body .background .content .typeplace .right,
+body .background .content .newRow .right,
+body .background .content .typeplace .wrong,
+body .background .content .newRow .wrong {
+  float: left;
+  height: 1rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: green;
+  line-height: 1rem;
+  margin-bottom: 0.5rem;
+}
+body .background .content .typeplace .wrong,
+body .background .content .newRow .wrong {
+  background-color: red;
+}
+body .background .content .typeplace .space,
+body .background .content .newRow .space {
+  width: 0.297em;
+}
+body .background .content .row1 {
+  top: 2.6rem !important;
+}
+body .background .content .row2 {
+  top: 4rem !important;
+}
+body .background .content .row3 {
+  top: 5.41rem !important;
+}
+body .background .content .row4 {
+  top: 6.82rem !important;
+}
+body .background .content .row5 {
+  top: 8.13rem !important;
+}
+body .background .content .typeplace {
+  position: absolute;
+}
+body .result {
+  display: none;
+  height: 20rem;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-size: 1.6rem;
+  margin-top: 4%;
+  flex-direction: column;
+  align-items: center;
+}
+body .result .avarage-time {
+  font-size: 5rem;
+}
+body .result .buttons {
+  margin-top: 3rem;
+}
+body .result .buttons .save,
+body .result .buttons .try-again {
+  padding: 6px 20px;
+  background-color: #ffc300bf;
+  border-radius: 5px;
+  color: black;
+  font-size: 20px;
+  float: left;
+}
+body .result .buttons .try-again {
+  background-color: rgba(255, 255, 255, 0.657);
+}
+body .result .buttons .save {
+  margin-right: 1rem;
+}
+body .author-note {
+  position: absolute;
+  bottom: 2rem;
+}
+body .author-note p {
+  color: lightgray;
+  font-size: 0.5rem;
+  display: inline-block;
+  margin: 0;
+  padding: 0 1rem;
+}
+body .author-note p:nth-of-type(2n-1) {
+  border-right: 1px solid lightgray;
+}

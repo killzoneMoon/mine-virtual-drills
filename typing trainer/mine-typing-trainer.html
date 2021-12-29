@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="typing-trainer.css">
+    <title>mine typing trainer</title>
+    <script  src="./typing-trainer.js"></script>
+</head>
+<body>
+    <div class="background">
+        <div class="wrap">
+            <div class="onshow">
+                <div class="title">Typing test</div>
+                <div class="subtitle">How many words per minute can you type?</div>
+            </div>
+            <div class="content" >
+                <div class="textarea-background" onclick="typing.getFocus()" placeholder=""></div>
+                <input class="textarea" type="text"/>
+                <div class="typeplace" onclick="typing.getFocus()"></div>
+            </div>
+            <div class="caption">Start typing to begin</div>
+        </div>
+        <div class="result">
+            <span>
+                 Typing Test
+            </span>
+            <div class="avarage-time score">
+                0wpm
+             </div>
+             <span>
+                 Save your score to see how you compare
+             </span>
+            <div class="buttons">
+             <div class="save" onclick="typing.saveScore()">save score</div>
+             <div class="try-again" onclick="typing.tryAgain()">try again</div>
+            </div>
+        </div>
+        <div class="author-note"><p>author : killzone</p><p>email : 3551810007@qq.com</p></div>
+    </div>
+    <script type="module">
+        window.onload = ()=>{
+            typing.onShow()
+        }
+    </script>
+</body>
+</html>
