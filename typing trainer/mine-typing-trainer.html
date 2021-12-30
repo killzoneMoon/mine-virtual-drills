@@ -9,6 +9,16 @@
     <script  src="./typing-trainer.js"></script>
 </head>
 <body>
+    <div class="rem" style="
+        float: left;
+    height: 1rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1rem;
+    margin-bottom: 0.5rem;
+    position: absolute;
+    color: transparent;">a</div>
     <div class="background">
         <div class="wrap">
             <div class="onshow">
@@ -36,6 +46,14 @@
              <div class="save" onclick="typing.saveScore()">save score</div>
              <div class="try-again" onclick="typing.tryAgain()">try again</div>
             </div>
+        </div>
+        <div class="select">
+            <span>How long the aritcle do you want to practice?</span>
+            <select name="" onchange="typing.changeType()" id="" value="1">
+                <option value="1">alltype</option>
+                <option value="2">short</option>
+                <option value="3">long</option>
+            </select>
         </div>
         <div class="author-note"><p>author : killzone</p><p>email : 3551810007@qq.com</p></div>
     </div>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aim trainer</title>
+    <link rel="stylesheet" href="./aim trainer.css">
+    <script src="./aim trainer.js"></script>
+</head>
+<body>
+    <div class="background">
+        <div class="play-sets">
+            <div class="count">remaining &nbsp;&nbsp;&nbsp; <p class="remain-count">30</p></div>
+            <div class="target-wrap" >
+                <canvas class="target"  wdith="200PX"  height="200PX"></canvas>
+            </div>
+        </div>
+       <div class="onshow">
+            <div class="title">Aim Trainer</div>
+            <canvas wdith="50px" onclick="beginTraining()" heigt="100px" class="first-target target"></canvas>
+            <div class="notation">Hit 30 target as fast as you can click the target above to begin</div>
+       </div>
+       <div class="result">
+           <span>
+                Aavarage time per target
+           </span>
+           <div class="avarage-time">
+               0ms
+            </div>
+            <span>
+                Save your score to see how you compare
+            </span>
+           <div class="buttons">
+            <div class="save" onclick="aimTrainer.saveScore()">save score</div>
+            <div class="try-again" onclick="tryAgain()">try again</div>
+           </div>
+       </div>
+    </div>
+
+    <script>
+
+        let details = {
+            totalSum:10,
+            currentScore:0,
+            isPlaying:false,
+            beginAt:'',
+            endAt:'',
+            target:{},
+            remainCount:{},
+        }
+
+        function hitTarget(ev){
+            aimTrainer.hitTarget(ev)
+        }
+        function tryAgain(){
+            aimTrainer.tryAgain()
+        }
+        function beginTraining(){
+            aimTrainer.beginTraining()
+        }
+        
+        window.onload = function(){
+            
+            document.querySelector('.target').addEventListener('click',(ev)=>{
+                hitTarget(ev)
+            })
+
+            const canvases = document.querySelectorAll('.target')
+            if(canvases[0].getContext){                
+             canvases.forEach(c=>{
+                 aimTrainer.drawTarget(c,canvases[0]===c)
+             })
+            }else{
+                alert('sorry, your browser does not support this website!')
+            }
+        }
+    </script>
+</body>
+
+
+</html>
