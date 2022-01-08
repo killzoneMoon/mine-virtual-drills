@@ -43,9 +43,10 @@ function progress (ev){
         details.textarea.value = details.typing
         return
     }
-    setTimeout(() => {
-       
-    }, 1000);
+    if(details.typing.length - details.textarea.value.length > 1){
+        details.textarea.value = details.typing
+        return
+    }
     if(ev.keyCode == 8){
     deleteLetter()
         return
@@ -153,6 +154,7 @@ function tryAgain(){
 }
 function initContent(){
     details.content = articles.typingArticles[Math.floor(Math.random() * articles.typingArticles.length)]
+    details.contentbackup = details.content
     if(details.type == 2 && details.content.length > 220){
         initContent()
         return

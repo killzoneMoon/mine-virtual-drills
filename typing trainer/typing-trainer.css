@@ -1,14 +1,17 @@
+html {
+  font-size: 30px;
+  font-family: Helvetica, Arial, sans-serif;
+}
 body {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
   color: white;
-  font-family: comic sans ms;
 }
 body .background {
   background-color: #4387d6;
-  height: 40rem;
+  height: 28rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -85,7 +88,7 @@ body .background .content .newRow .wrong {
 }
 body .background .content .typeplace .space,
 body .background .content .newRow .space {
-  width: 0.297em;
+  width: 0.269rem;
 }
 body .background .content .typeplace {
   position: absolute;
@@ -126,6 +129,7 @@ body .select {
   margin: 2rem;
 }
 body .select select {
+  font-size: 1rem;
   background-color: transparent;
   color: whitesmoke;
   border-radius: 1rem;
@@ -141,7 +145,7 @@ body .select select option {
 }
 body .author-note {
   position: absolute;
-  bottom: 2rem;
+  bottom: 5rem;
 }
 body .author-note p {
   color: lightgray;
