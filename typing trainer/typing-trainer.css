@@ -90,6 +90,10 @@ body .background .content .typeplace .space,
 body .background .content .newRow .space {
   width: 0.269rem;
 }
+body .background .content .typeplace .shortSpace,
+body .background .content .newRow .shortSpace {
+  width: 6px!important;
+}
 body .background .content .typeplace {
   position: absolute;
 }

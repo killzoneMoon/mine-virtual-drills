@@ -68,6 +68,13 @@ function progress (ev){
     newNode.innerHTML = details.content.slice()[details.typing.length - 1]
     if(ev.keyCode == 32 && details.content.slice()[details.typing.length - 1]==' ')newNode.className += ' space'
     if(ev.keyCode != 32 && details.content.slice()[details.typing.length - 1] == ' ')newNode.className += ' space'
+    if(newNode.className.split(' ').length == 2){
+        let i = details.typing.length
+        const ifCapital = /^.*[A-Z]+.*$/
+
+        const contentArr = details.content.split('')
+        if(ifCapital.test(contentArr[i-2]) && (ifCapital.test(contentArr[i]) || ifCapital.test(contentArr[i])))newNode.className += ' shortSpace'
+    }
     details.newNode = newNode
     
     details.typeplace[details.currentRow].appendChild(newNode)
